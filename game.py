@@ -20,7 +20,7 @@ font_medium = pygame.font.SysFont("Arial", 52, bold=True)
 font_small  = pygame.font.SysFont("Arial", 38)
 
 # ── Cat image ─────────────────────────────────────────
-cat_img_raw = pygame.image.load("/Users/navya/HappyHarvest/Cat.jpg").convert()
+cat_img_raw = pygame.image.load("assets/Cat.jpg").convert()
 cat_img = pygame.transform.scale(cat_img_raw, (280, 280))
 
 # ── Webcam ────────────────────────────────────────────
@@ -32,10 +32,10 @@ cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
 tracker = HandTracker(WIDTH, HEIGHT)
 
 # ── Fruit paths ───────────────────────────────────────
-APPLE_PATH      = "Apple.png"
-WATERMELON_PATH = "Watermellon.png"
-PINEAPPLE_PATH  = "Pineapple.png"
-WORM_PATH       = "Worm.png"
+APPLE_PATH      = "assets/Apple.png"
+WATERMELON_PATH = "assets/Watermellon.png"
+PINEAPPLE_PATH  = "assets/Pineapple.png"
+WORM_PATH       = "assets/Worm.png"
 
 FRUIT_CONFIG = [
     (APPLE_PATH,      False, 4),
