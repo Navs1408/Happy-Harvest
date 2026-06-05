@@ -1,39 +1,52 @@
-#  Happy Harvest
+# 🌾 Happy Harvest
 
-A hand-tracking fruit slicing game built with Python, OpenCV, MediaPipe, and Pygame. Slice fruits flying across your webcam feed using just your index finger — but watch out for worms!
-
----
-
-##  How to Play
-
-- **Slice fruits** (apple, watermelon, pineapple) with your index finger to earn points
-- Miss a fruit= -1 point
-- Slice a worm = -1 point + 1 worm strike
-- 3 worm strikes = Game Over
-- Press R to restart
-- Press ESC to quit
+A real-time hand-tracking fruit slicing game built with Python. Use your webcam and index finger as a blade to slice flying fruits — but dodge the worms or lose a life!
 
 ---
 
-##  Project Structure
+## 🎮 How to Play
+
+- **Slice fruits** (apple, watermelon, pineapple) with your index finger to earn **+1 point**
+- **Miss a fruit** = **-1 point**
+- **Slice a worm** = **-1 life** (shown as hearts at the top)
+- **3 worms sliced** = Game Over
+- Press **R** to restart
+- Press **ESC** to quit
+
+---
+
+## ✨ Features
+
+- 🖐 **Hand tracking** — uses your webcam to track your index fingertip in real time
+- ❤️ **Lives system** — 3 hearts displayed at the top, one disappears per worm sliced
+- 🏆 **High score tracker** — your best score is saved and shown on the start screen
+- 🎬 **Splash screen** — raise your finger to start the game
+- 😸 **Game Over screen** — shows your final score and best score with a cat meme
+
+---
+
+## 📁 Project Structure
 
 ```
 HappyHarvest/
+├── assets/
+│   ├── Apple.png
+│   ├── Watermellon.png
+│   ├── Pineapple.png
+│   ├── Worm.png
+│   └── Cat.jpg
 ├── game.py               # Main game loop
-├── fruit.py              # Fruit class (movement, drawing, hit detection)
-├── hand_tracking.py      # Webcam hand tracking via MediaPipe
+├── fruit.py              # Fruit class
+├── hand_tracking.py      # Webcam + MediaPipe hand tracking
 ├── launch.command        # One-click launcher (Mac)
+├── highscore.json        # Auto-generated, saves your best score
 ├── requirements.txt      # Python dependencies
-├── Apple.png             # Fruit image
-├── Watermellon.png       # Fruit image
-├── Pineapple.png         # Fruit image
-├── Worm.png              # Worm image (the bomb!)
-└── Cat.jpg               # Game Over screen image
+└── README.md
 ```
 
 ---
 
-##  Setup & Installation
+## 🛠️ Setup & Installation
 
 ### Requirements
 - Mac (tested on MacBook Air M1)
@@ -55,9 +68,9 @@ pip install pygame opencv-python mediapipe==0.10.9 pillow
 
 ---
 
-##  Running the Game
+## ▶️ Running the Game
 
-### Option 1 — One-click launcher (easiest)
+### Option 1 — One-click launcher
 Double click `launch.command` in your HappyHarvest folder in Finder.
 
 ### Option 2 — Terminal
@@ -69,33 +82,35 @@ python game.py
 
 ---
 
-## Tech Stack
+## 🧰 Tech Stack
 
 | Tool | Purpose |
 |---|---|
 | Python 3.11 | Core language |
-| Pygame | Game window, rendering, input |
+| Pygame | Game window and rendering |
 | OpenCV (cv2) | Webcam feed capture |
 | MediaPipe | Hand landmark detection |
-| Pillow | Image loading support |
+| Pillow | Image loading |
 
 ---
 
-##  Troubleshooting
+## 🐛 Troubleshooting
 
-`numpy.core.umath failed to import`
+**`numpy.core.umath failed to import`**
 ```bash
-pip uninstall numpy -y
-pip install numpy
+pip uninstall numpy -y && pip install numpy
 ```
 
-`module 'mediapipe' has no attribute 'solutions'`
+**`module 'mediapipe' has no attribute 'solutions'`**
 ```bash
 pip install mediapipe==0.10.9
 ```
 
-Game opens in wrong environment
-Always make sure you see `(happyharvest)` in your terminal before running. If it says `(base)`, run `conda activate happyharvest` first.
+**Game opens in wrong environment**
+Make sure terminal shows `(happyharvest)` before running. If it says `(base)`, run `conda activate happyharvest` first.
 
-Hand tracking feels off
-Make sure your webcam is unobstructed and you're in decent lighting. Hold your index finger clearly extended and move slowly at first to calibrate.
+---
+
+## 👩‍💻 Built By
+
+Navya — inspired by Fruit Ninja, built from scratch with Python and hand tracking.
