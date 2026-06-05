@@ -1,10 +1,10 @@
-# 🌾 Happy Harvest
+#  Happy Harvest
 
 A real-time hand-tracking fruit slicing game built with Python. Use your webcam and index finger as a blade to slice flying fruits — but dodge the worms or lose a life!
 
 ---
 
-## 🎮 How to Play
+##  How to Play
 
 - **Slice fruits** (apple, watermelon, pineapple) with your index finger to earn **+1 point**
 - **Miss a fruit** = **-1 point**
@@ -15,19 +15,19 @@ A real-time hand-tracking fruit slicing game built with Python. Use your webcam 
 
 ---
 
-## ✨ Features
+##  Features
 
-- 🖐 **Hand tracking** — uses your webcam to track your index fingertip in real time
-- ❤️ **Lives system** — 3 hearts displayed at the top, one disappears per worm sliced
-- 🏆 **High score tracker** — your best score is saved and shown on the start screen
-- 🎬 **Splash screen** — raise your finger to start the game
-- 😸 **Game Over screen** — shows your final score and best score with a cat meme
+-  **Hand tracking** — uses your webcam to track your index fingertip in real time
+-  **Lives system** — 3 hearts displayed at the top, one disappears per worm sliced
+-  **High score tracker** — your best score is saved and shown on the start screen
+-  **Splash screen** — raise your finger to start the game
+-  **Game Over screen** — shows your final score and best score with a cat meme
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
-```
+
 HappyHarvest/
 ├── assets/
 │   ├── Apple.png
@@ -42,11 +42,11 @@ HappyHarvest/
 ├── highscore.json        # Auto-generated, saves your best score
 ├── requirements.txt      # Python dependencies
 └── README.md
-```
+
 
 ---
 
-## 🛠️ Setup & Installation
+##  Setup & Installation
 
 ### Requirements
 - Mac (tested on MacBook Air M1)
@@ -68,7 +68,7 @@ pip install pygame opencv-python mediapipe==0.10.9 pillow
 
 ---
 
-## ▶️ Running the Game
+##  Running the Game
 
 ### Option 1 — One-click launcher
 Double click `launch.command` in your HappyHarvest folder in Finder.
@@ -82,7 +82,7 @@ python game.py
 
 ---
 
-## 🧰 Tech Stack
+##  Tech Stack
 
 | Tool | Purpose |
 |---|---|
@@ -94,7 +94,7 @@ python game.py
 
 ---
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 **`numpy.core.umath failed to import`**
 ```bash
@@ -109,8 +109,3 @@ pip install mediapipe==0.10.9
 **Game opens in wrong environment**
 Make sure terminal shows `(happyharvest)` before running. If it says `(base)`, run `conda activate happyharvest` first.
 
----
-
-## 👩‍💻 Built By
-
-Navya — inspired by Fruit Ninja, built from scratch with Python and hand tracking.
